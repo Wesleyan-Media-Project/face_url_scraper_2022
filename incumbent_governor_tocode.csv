@@ -1,0 +1,15 @@
+usps_code,fips_code,state_name,_merge
+DE,10,DELAWARE,left_only
+IN,18,INDIANA,left_only
+KY,21,KENTUCKY,left_only
+LA,22,LOUISIANA,left_only
+MO,29,MISSOURI,left_only
+MS,28,MISSISSIPPI,left_only
+MT,30,MONTANA,left_only
+NC,37,NORTH CAROLINA,left_only
+ND,38,NORTH DAKOTA,left_only
+NJ,34,NEW JERSEY,left_only
+UT,49,UTAH,left_only
+VA,51,VIRGINIA,left_only
+WA,53,WASHINGTON,left_only
+WV,54,WEST VIRGINIA,left_only
