@@ -9,8 +9,8 @@
     - Persons' facebook pages
     - Candidate campaign websites
     - Votesmart
-    - Other websites (only for face quality control)
 - We only use a scraped face from Votesmart (size-wise not ideal for face recognition) if it exists when we can not find face images in any other listed venues. 
+- At the final face quality control stage, we also use a few face images from other websites.
 
 
 #### Steps
