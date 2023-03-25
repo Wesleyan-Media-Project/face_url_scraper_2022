@@ -26,6 +26,7 @@
 - Include 1650 unique wmpids (faces) for the 2022 face collection
 - Among them, 94 wmpids do not have face images
 - The face_collection_2022 folder thus includes 1556 face image files
+- The face_collection_2022 folder can be found at: Delta Lab>github>face_url_scraper_2022
 
 -------------------------------------------
 
