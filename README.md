@@ -23,7 +23,7 @@
 4. Download face images using urls 
 
 #### Results
-- Include 1650 unique wmpid (face) for the 2022 face collection
+- Include 1650 unique wmpids (faces) for the 2022 face collection
 - Among them, 94 wmpids do not have face images
 - The face_collection_2022 folder thus includes 1556 face image files
 
