@@ -20,7 +20,7 @@
     - occluded
     - non-frontal
 3. Select largest face image for each unique wmpid
-4. Download face images using urls 
+4. Download face images using the urls 
 
 #### Results
 - Include 1650 unique wmpids (faces) for the 2022 face collection
