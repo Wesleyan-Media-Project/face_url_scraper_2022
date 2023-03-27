@@ -14,7 +14,7 @@
 
 
 #### Steps
-1. Scrape face urls according to the following face categories and obtain 1681 rows in result_face_url_2022_raw.csv with duplicated wmpids that have different urls. For example, Joe Biden are scraped twice both as G20 leader and U.S. president.
+1. Scrape face urls according to the following face categories and obtain 1681 rows in result_face_url_2022_raw.csv with duplicated wmpids that have different urls. For example, Joe Biden is scraped twice both as G20 leader and U.S. president.
 2. Go through the downloaded faces to make sure they are not:
     - cropped
     - occluded
