@@ -78,7 +78,7 @@ Judicial (16)
 
 -------------------------------------------
 
-### Copyright
+### Copyrights
 - Ballotpedia: https://ballotpedia.org/Ballotpedia:Image_use_policy
     - GFDL licenses
     - "These images are available for reuse in non-commercial settings with attribution. Please use the following language when using any images that belong to Ballotpedia:This image comes from the website Ballotpedia.org. It is suitable for reuse under GFDL licensing."
