@@ -1,38 +1,77 @@
-## The 2022 face collection for face recogntion
+# Wesleyan Media Project - Face_Url_Scraper_2022
 
-### Methods
+Welcome! This repo is part of the Cross-platform Election Advertising Transparency initiatIVE ([CREATIVE](https://www.creativewmp.com/)) project. CREATIVE is a joint infrastructure project of WMP and privacy-tech-lab at Wesleyan University. CREATIVE provides cross-platform integration and standardization of political ads collected from Google and Facebook.
 
-#### Sources
-- Here are the online venues where we search for face images.  
+This repo is a part of Data Collection step. You will also need the repo [Datasets](https://github.com/Wesleyan-Media-Project/datasets) to run the codes.
+
+![A picture of the repo pipeline with this repo highlighted](data/Pipelines.png)
+
+
+## Table of Contents
+
+
+- [Introduction](#introduction)
+    - [Objective](#objective) 
+        
+
+- [Data](#data)
+    - [Results](#results)
+    - [Face categories](#face-categories)
+        - [Legislative](#legislative)
+        - [Executive](#executive)
+        - [Judicial](#judicial)
+        - [Other prominent persons](#other-prominent-persons)
+
+    - [What can you do with this data?](#what-can-you-do-with-this-data)
+    - [Copyrights of face images](#copyrights-of-face-images)
+
+- [Setup](#setup)
+## Introduction
+This repo contains the codes that clean-up and scrape political figures' URLs for the 2022 election cycle. The online venues where we search for face images include:
+
     - Ballotpedia 
     - Wikipedia
     - Persons' facebook pages
     - Candidate campaign websites
     - Votesmart
-- We only use a scraped face from Votesmart (size-wise not ideal for face recognition)when we could not find face images in any of the other listed venues. 
-- At the final face quality control stage, we also use a few face images from other websites.
+
+We only use a scraped face from Votesmart (size-wise not ideal for face recognition)when we could not find face images in any of the other listed venues. And at the final face quality control stage, we also use a few face images from other websites. The data produced by each script is stored in the `data` folder. In the end, they would be combined and organize into a single csv file: `result_face_url_2022.csv` through code `08_face_url_final_selection.ipynb`.
 
 
-#### Steps
-1. Scrape face urls according to the following face categories and obtain 1681 rows in [result_face_url_2022_raw.csv](https://github.com/Wesleyan-Media-Project/face_url_scraper_2022/blob/main/result_face_url_2022.csv) with duplicated wmpids that have different urls. For example, Joe Biden is scraped twice both as G20 leader and U.S. president.
-2. Go through the downloaded faces to make sure they are not:
-    - cropped
-    - occluded
-    - non-frontal
-3. Select largest face image for each unique wmpid
-4. Download face images using the urls 
 
-#### Results
+## Objective
+
+
+
+Each of our repos belongs to one or more of the the following categories:
+- Data Collection
+- Data Storage & Processing
+- Preliminary Data Classification
+- Final Data Classification
+
+This repo is part of the Data Collection section.
+
+
+
+## Data
+
+The data created by the scripts in this repo is in csv format. 
+
+### Results
 - Include 1650 unique wmpids (faces) for the 2022 face collection
 - Among them, 94 wmpids do not have face images
 - The face_collection_2022 folder thus includes 1556 face image files
-- The face_collection_2022 folder can be found at: Delta Lab>github>face_url_scraper_2022
+- The face_collection_2022 folder can be found at: DeltaLab>github>face_url_scraper_2022
 
--------------------------------------------
+The final output contains the following fields:
 
+ - **wmpid**: unique id for each political figure
+ - **Full_name**: full name of the political figure
+ - **Face_url_2022**: the url of the face image
+ - **Face_category_2022**: the category of the political figure 
 ### Face categories
 
-##### Legislative
+#### Legislative
 - Candidate source: wmpcand_012523_wmpid.csv
 - Face url source: ballotpedia / wikipedia
 
@@ -40,7 +79,7 @@
 2. Senate candidate (173) 
 3. Sitting US senators -117th (100)
 
-##### Executive
+#### Executive
 1. Current president (1)
 
 2. All former presidents (44)
@@ -76,7 +115,10 @@ Judicial (16)
 3. Political historical figures (1)
     - MLK
 
--------------------------------------------
+
+### What can you do with this data?
+This repo produced a cleaned version of political figures' face image urls in cvs format. We believe there are various ways you can use it for political ads analyses: You may use it as face recognition to recognize which political figure is present ads.
+You may also you it for sentiment analysis to see if the ads are supporting or attacking the political figure.
 
 ### Copyrights of face images
 - Ballotpedia: https://ballotpedia.org/Ballotpedia:Image_use_policy
@@ -92,3 +134,26 @@ Judicial (16)
 - Supreme Court: N.A.
 
 
+
+## Setup
+
+ First, make sure you have the [datasets](https://github.com/Wesleyan-Media-Project/datasets) repo cloned. 
+
+ Then, you need to install the following libraries in R:
+
+    - tidyverse
+    - rvest
+    - httr
+    - xml2
+ Next, install the following packages for Python:
+
+    - pandas
+    - numpy
+    - bs4
+    - urllib
+    - re
+    - fuzzywuzzy
+After you have installed the required libraries, you can now run the code follow the order of the numbers in the file names.(e.g. you can start with: 01_ballotpedia_scaper_senate_cleanup.ipynb, then 01_ballotpedia_scaper_senate.ipynb, then 02_ballotpedia_scaper_house_cleanup.ipynb ...
+  08_face_url_final_selection.ipynb)
+
+Please be careful when re-run this script as many face images are replaced with current office holder on relevant official websites.
