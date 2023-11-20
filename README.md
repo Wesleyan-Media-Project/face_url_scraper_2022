@@ -153,7 +153,7 @@ You may also you it for sentiment analysis to see if the ads are supporting or a
     - urllib
     - re
     - fuzzywuzzy
-After you have installed the required libraries, you can now run the code follow the order of the numbers in the file names.(e.g. you can start with: 01_ballotpedia_scaper_senate_cleanup.ipynb, then 01_ballotpedia_scaper_senate.ipynb, then 02_ballotpedia_scaper_house_cleanup.ipynb ...
+After you have installed the required libraries, you can now run the code follow the order of the numbers in the file names (e.g. you can start with: 01_ballotpedia_scaper_senate_cleanup.ipynb, then 01_ballotpedia_scaper_senate.ipynb, then 02_ballotpedia_scaper_house_cleanup.ipynb ...
   08_face_url_final_selection.ipynb)
 
-Please be careful when re-run this script as many face images are replaced with current office holder on relevant official websites.
+Please be careful when re-runing this script as many face images are replaced with current office holder on relevant official websites.
