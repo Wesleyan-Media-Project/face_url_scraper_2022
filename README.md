@@ -1,8 +1,10 @@
 # Wesleyan Media Project - Face_Url_Scraper_2022
 
-Welcome! This repo is part of the Cross-platform Election Advertising Transparency initiatIVE ([CREATIVE](https://www.creativewmp.com/)) project. CREATIVE is a joint infrastructure project of WMP and privacy-tech-lab at Wesleyan University. CREATIVE provides cross-platform integration and standardization of political ads collected from Google and Facebook.
+Welcome! This repo contains codes for collecting and organizing face images of political figures for the 2022 US election cycle. The main purpose of this repo is to create a comprehensive dataset of face images that can be used for various analyses of political ads.The scripts provided here are intended to help journalists, academic researchers, and others interested in the democratic process to understand how to scrape and organize various face images from various sources.
 
-This repo is a part of Data Collection step. You will also need the repo [Datasets](https://github.com/Wesleyan-Media-Project/datasets) to run the codes.
+This repo is a part of the [Cross-platform Election Advertising Transparency Initiative (CREATIVE)](https://www.creativewmp.com/). CREATIVE has the goal of providing the public with analysis tools for more transparency of political ads across online platforms. In particular, CREATIVE provides cross-platform integration and standardization of political ads collected from Google and Facebook. CREATIVE is a joint project of the [Wesleyan Media Project (WMP)](https://mediaproject.wesleyan.edu/) and the [privacy-tech-lab](https://privacytechlab.org/) at [Wesleyan University](https://www.wesleyan.edu).
+
+To analyze the different dimensions of political ad transparency we have developed an analysis pipeline. The scripts in this repo are part of the Data Collection Step in our pipeline.
 
 ![A picture of the repo pipeline with this repo highlighted](Creative_Pipelines.png)
 
@@ -26,6 +28,7 @@ This repo is a part of Data Collection step. You will also need the repo [Datase
   - [Copyrights of face images](#copyrights-of-face-images)
 
 - [Setup](#setup)
+- [5. Thank You!](#5-thank-you)
 
 ## Introduction
 
@@ -159,3 +162,35 @@ After you have installed the required libraries, you can now run the code follow
 08_face_url_final_selection.ipynb)
 
 Please be careful when re-runing this script as many face images are replaced with current office holder on relevant official websites.
+
+## 5. Thank You
+
+<p align="center"><strong>We would like to thank our financial supporters!</strong></p><br>
+
+<p align="center">This material is based upon work supported by the National Science Foundation under Grant Numbers 2235006, 2235007, and 2235008.</p>
+
+<p align="center" style="display: flex; justify-content: center; align-items: center;">
+  <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2235006">
+    <img class="img-fluid" src="nsf.png" height="150px" alt="National Science Foundation Logo">
+  </a>
+</p>
+
+<p align="center">The Cross-Platform Election Advertising Transparency Initiative (CREATIVE) is a joint infrastructure project of the Wesleyan Media Project and privacy-tech-lab at Wesleyan University in Connecticut.
+
+<p align="center" style="display: flex; justify-content: center; align-items: center;">
+  <a href="https://www.creativewmp.com/">
+    <img class="img-fluid" src="CREATIVE_logo.png"  width="220px" alt="CREATIVE Logo">
+  </a>
+</p>
+
+<p align="center" style="display: flex; justify-content: center; align-items: center;">
+  <a href="https://mediaproject.wesleyan.edu/">
+    <img src="wmp-logo.png" width="218px" height="100px" alt="Wesleyan Media Project logo">
+  </a>
+</p>
+
+<p align="center" style="display: flex; justify-content: center; align-items: center;">
+  <a href="https://privacytechlab.org/" style="margin-right: 20px;">
+    <img src="./plt_logo.png" width="200px" alt="privacy-tech-lab logo">
+  </a>
+</p>
