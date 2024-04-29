@@ -1,6 +1,6 @@
 # Wesleyan Media Project - Face_Url_Scraper_2022
 
-Welcome! This repo contains codes for collecting and organizing face images of political figures for the 2022 US election cycle. The main purpose of this repo is to create a comprehensive dataset of face images that can be used for various analyses of political ads.The scripts provided here are intended to help journalists, academic researchers, and others interested in the democratic process to understand how to scrape and organize various face images from various sources.
+Welcome! The main purpose of this repo is to create a comprehensive dataset of face images. This repo contains codes for collecting and organizing face images of political figures for the 2022 US election cycle. The scripts provided here are intended to help journalists, academic researchers, and others interested in the democratic process to understand how to scrape and organize various face images from various sources.
 
 This repo is a part of the [Cross-platform Election Advertising Transparency Initiative (CREATIVE)](https://www.creativewmp.com/). CREATIVE has the goal of providing the public with analysis tools for more transparency of political ads across online platforms. In particular, CREATIVE provides cross-platform integration and standardization of political ads collected from Google and Facebook. CREATIVE is a joint project of the [Wesleyan Media Project (WMP)](https://mediaproject.wesleyan.edu/) and the [privacy-tech-lab](https://privacytechlab.org/) at [Wesleyan University](https://www.wesleyan.edu).
 
@@ -10,52 +10,34 @@ To analyze the different dimensions of political ad transparency we have develop
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-
-  - [Objective](#objective)
-
-- [Data](#data)
-
+- [1. Overview](#1-overview)
   - [Results](#results)
+  - [copyrights of face images](#copyrights-of-face-images)
   - [Face categories](#face-categories)
+- [2. Setup](#2-setup)
+- [3. Thank You!](#5-thank-you)
 
-    - [Legislative](#legislative)
-    - [Executive](#executive)
-    - [Judicial](#judicial)
-    - [Other prominent persons](#other-prominent-persons)
+## 1. Overview
 
-  - [What can you do with this data?](#what-can-you-do-with-this-data)
-  - [Copyrights of face images](#copyrights-of-face-images)
+This repo contains codes that collect and organize face images of political figures for the 2022 US election cycle.
 
-- [Setup](#setup)
-- [5. Thank You!](#5-thank-you)
+The repo contains scripts that:
 
-## Introduction
+1. Scrape and organize face images from various online sources in a hierarchical manner. The primary sources are:
 
-This repo contains the codes that clean-up and scrape political figures' URLs for the 2022 election cycle. The online venues where we search for face images include:
+   - Ballotpedia
+   - Wikipedia
+   - Persons' facebook pages
+   - Candidate campaign websites
 
-    - Ballotpedia
-    - Wikipedia
-    - Persons' facebook pages
-    - Candidate campaign websites
-    - Votesmart
+   If a suitable face image cannot be found from these primary sources, then we attempt to scrape a face image from VoteSmart as a fallback option since face images from VoteSmart are often not ideal in size (low resolution) for face recognition purposes. The VoteSmart scraper is located in a seperated folder `/votesmart`
 
-We only use a scraped face from Votesmart (size-wise not ideal for face recognition)when we could not find face images in any of the other listed venues. And at the final face quality control stage, we also use a few face images from other websites. The data produced by each script is stored in the `data` folder. In the end, they would be combined and organize into a single csv file: `result_face_url_2022.csv` through code `08_face_url_final_selection.ipynb`.
+   The scraper collects the face images via different categories based on the political figures' roles, such as legislative (House and Senate candidates, sitting Senators), executive (presidents, cabinet members, governors), judicial (Supreme Court Justices), and other prominent persons. You can find more detailed description of face categories in [Face categories](#face-categories) section.
 
-## Objective
+   The scrapers are named under their sources and categories, for example, a scraper that collects senators' face via Ballotpedia is called `01_ballotpedia_scaper_senate.ipynb`. The script that organizing(clean up) its scraping results is called `01_ballotpedia_scaper_senate_cleanup.ipynb`.The data produced by each script is stored in the `data` folder.
 
-Each of our repos belongs to one or more of the following categories:
+2. After collecting face images from these sources, a final face quality control and assemble stage is performed via `07_face_url_final_assemble.ipynb` and `08_face_url_final_selection.ipynb`. During this stage, a few additional face images may be manually used from other websites to ensure the best possible quality and consistency across the dataset. After the quality control, all the collected and organized face images urls would be combined into a single csv file: `result_face_url_2022.csv` through code `08_face_url_final_selection.ipynb`.
 
-- Data Collection
-- Data Processing
-- Data Classification
-- Compiled Final Data
-
-This repo is part of the Data Collection step.
-
-## Data
-
-The data created by the scripts in this repo is in csv format.
 
 ### Results
 
@@ -70,6 +52,21 @@ The final output contains the following fields:
 - **Full_name**: full name of the political figure
 - **Face_url_2022**: the url of the face image
 - **Face_category_2022**: the category of the political figure
+
+
+
+### Copyrights of face images
+
+- Ballotpedia: https://ballotpedia.org/Ballotpedia:Image_use_policy
+  - GFDL licenses
+  - "These images are available for reuse in non-commercial settings with attribution. Please use the following language when using any images that belong to Ballotpedia:This image comes from the website Ballotpedia.org. It is suitable for reuse under GFDL licensing."
+- Wikipedia: https://en.wikipedia.org/wiki/Wikipedia:Image_use_policy
+  - GFDL licenses
+- Whitehouse: https://www.whitehouse.gov/copyright/
+  - Creative Commons Attribution 3.0 License: https://creativecommons.org/licenses/by/3.0/us/
+  - "Share — copy and redistribute the material in any medium or format"
+- National Governors Association: N.A.
+- Supreme Court: N.A.
 
 ### Face categories
 
@@ -118,27 +115,10 @@ Judicial (16)
    - The secretary general of UN
    - Director of WHO - Tedros Adhanom
 3. Political historical figures (1)
+
    - MLK
 
-### What can you do with this data?
-
-This repo produced a cleaned version of political figures' face image urls in cvs format. We believe there are various ways you can use it for political ads analyses: You may use it as face recognition to recognize which political figure is present ads.
-You may also you it for sentiment analysis to see if the ads are supporting or attacking the political figure.
-
-### Copyrights of face images
-
-- Ballotpedia: https://ballotpedia.org/Ballotpedia:Image_use_policy
-  - GFDL licenses
-  - "These images are available for reuse in non-commercial settings with attribution. Please use the following language when using any images that belong to Ballotpedia:This image comes from the website Ballotpedia.org. It is suitable for reuse under GFDL licensing."
-- Wikipedia: https://en.wikipedia.org/wiki/Wikipedia:Image_use_policy
-  - GFDL licenses
-- Whitehouse: https://www.whitehouse.gov/copyright/
-  - Creative Commons Attribution 3.0 License: https://creativecommons.org/licenses/by/3.0/us/
-  - "Share — copy and redistribute the material in any medium or format"
-- National Governors Association: N.A.
-- Supreme Court: N.A.
-
-## Setup
+## 2. Setup
 
 First, make sure you have the [datasets](https://github.com/Wesleyan-Media-Project/datasets) repo cloned.
 
@@ -163,7 +143,7 @@ After you have installed the required libraries, you can now run the code follow
 
 Please be careful when re-runing this script as many face images are replaced with current office holder on relevant official websites.
 
-## 5. Thank You
+## 3. Thank You
 
 <p align="center"><strong>We would like to thank our financial supporters!</strong></p><br>
 
