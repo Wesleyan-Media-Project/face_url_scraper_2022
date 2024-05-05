@@ -15,7 +15,7 @@ To analyze the different dimensions of political ad transparency we have develop
   - [Face categories](#face-categories)
   - [copyrights of face images](#copyrights-of-face-images)
 - [2. Setup](#2-setup)
-- [3. Thank You!](#5-thank-you)
+- [3. Thank You!](#3-thank-you)
 
 ## 1. Overview
 
