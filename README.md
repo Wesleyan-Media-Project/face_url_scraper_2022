@@ -12,8 +12,8 @@ To analyze the different dimensions of political ad transparency we have develop
 
 - [1. Overview](#1-overview)
   - [Results](#results)
-  - [copyrights of face images](#copyrights-of-face-images)
   - [Face categories](#face-categories)
+  - [copyrights of face images](#copyrights-of-face-images)
 - [2. Setup](#2-setup)
 - [3. Thank You!](#5-thank-you)
 
@@ -38,13 +38,13 @@ The repo contains scripts that:
 
 2. After collecting face images from these sources, a final face quality control and assemble stage is performed via `07_face_url_final_assemble.ipynb` and `08_face_url_final_selection.ipynb`. During this stage, a few additional face images may be manually used from other websites to ensure the best possible quality and consistency across the dataset. After the quality control, all the collected and organized face images urls would be combined into a single csv file: `result_face_url_2022.csv` through code `08_face_url_final_selection.ipynb`.
 
-
 ### Results
+
+Here is a summary of the final face image collection dataset:
 
 - Include 1650 unique wmpids (faces) for the 2022 face collection
 - Among them, 94 wmpids do not have face images
 - The face_collection_2022 folder thus includes 1556 face image files
-- The face_collection_2022 folder can be found at: DeltaLab>github>face_url_scraper_2022
 
 The final output contains the following fields:
 
@@ -53,22 +53,14 @@ The final output contains the following fields:
 - **Face_url_2022**: the url of the face image
 - **Face_category_2022**: the category of the political figure
 
-
-
-### Copyrights of face images
-
-- Ballotpedia: https://ballotpedia.org/Ballotpedia:Image_use_policy
-  - GFDL licenses
-  - "These images are available for reuse in non-commercial settings with attribution. Please use the following language when using any images that belong to Ballotpedia:This image comes from the website Ballotpedia.org. It is suitable for reuse under GFDL licensing."
-- Wikipedia: https://en.wikipedia.org/wiki/Wikipedia:Image_use_policy
-  - GFDL licenses
-- Whitehouse: https://www.whitehouse.gov/copyright/
-  - Creative Commons Attribution 3.0 License: https://creativecommons.org/licenses/by/3.0/us/
-  - "Share — copy and redistribute the material in any medium or format"
-- National Governors Association: N.A.
-- Supreme Court: N.A.
+An example of the final output is shown below:
+ | wmpid       | Full_name     | Face_url_2022                                                                    | Face_category_2022                                                            |
+   | --------- | --------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------- |
+   | WMPID1000 | Josh Gottheimer | <https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/Josh_Gottheimer.jpg> | House |
 
 ### Face categories
+
+The face images are collected from various sources and are categorized into the following categories:
 
 #### Legislative
 
@@ -84,15 +76,15 @@ The final output contains the following fields:
 1. Current president (1)
 
 2. All former presidents (44)
-   - face url source: https://www.whitehouse.gov/about-the-white-house/presidents/
+   - face url source: <https://www.whitehouse.gov/about-the-white-house/presidents/>
 3. Cabinet (25)
-   - Face url source: https://www.whitehouse.gov/administration/cabinet/
+   - Face url source: <https://www.whitehouse.gov/administration/cabinet/>
 4. Gubernatorial candidates (82)
 
    - Candidate source: Priors 2022.xlsx provided by ABC News
 
 5. Sitting governor (14)
-   - face url source: https://www.nga.org/governors/
+   - face url source: <https://www.nga.org/governors/>
 6. Public health related leaders (6)
    - The Secretary of the Department of Health and Human Services
    - The Surgeon General
@@ -105,18 +97,33 @@ Judicial (16)
 
 1. Supreme Court Justice (current)
 2. Supreme Court Justice (former) - all who took judicial oath after 1980
-   - face url source: https://www.supremecourt.gov/about/biographies.aspx
+   - face url source: <https://www.supremecourt.gov/about/biographies.aspx>
 
 #### Other prominent persons
 
 1. Other prominent politicians(3): Mike Pence, Hilary Clinton, Robert Mueller
 2. International political leaders (23)
-   - G20: https://en.wikipedia.org/wiki/G20
+   - G20: <https://en.wikipedia.org/wiki/G20>
    - The secretary general of UN
    - Director of WHO - Tedros Adhanom
 3. Political historical figures (1)
 
    - MLK
+
+### Copyrights of face images
+
+The face images are collected from various sources, and the copyrights of the face images are as follows:
+
+- Ballotpedia: <https://ballotpedia.org/Ballotpedia:Image_use_policy>
+  - GFDL licenses
+  - "These images are available for reuse in non-commercial settings with attribution. Please use the following language when using any images that belong to Ballotpedia:This image comes from the website Ballotpedia.org. It is suitable for reuse under GFDL licensing."
+- Wikipedia: <https://en.wikipedia.org/wiki/Wikipedia:Image_use_policy>
+  - GFDL licenses
+- Whitehouse: <https://www.whitehouse.gov/copyright/>
+  - Creative Commons Attribution 3.0 License: <https://creativecommons.org/licenses/by/3.0/us/>
+  - "Share — copy and redistribute the material in any medium or format"
+- National Governors Association: N.A.
+- Supreme Court: N.A.
 
 ## 2. Setup
 
