@@ -9,15 +9,25 @@ To analyze the different dimensions of political ad transparency we have develop
 ![A picture of the repo pipeline with this repo highlighted](Creative_Pipelines.png)
 
 ## Table of Contents
-
-- [1. Overview](#1-overview)
+- [1. Video Tutorial](#1-video-tutorial)  
+- [2. Overview](#2-overview)
   - [Results](#results)
   - [Face categories](#face-categories)
   - [copyrights of face images](#copyrights-of-face-images)
-- [2. Setup](#2-setup)
-- [3. Thank You!](#3-thank-you)
+- [3. Setup](#3-setup)
+- [4. Thank You!](#4-thank-you)
 
-## 1. Overview
+  
+## 1. Video Tutorial
+If you are unable to see the video on Firefox with the error: 
+- No video with supported format and MIME type found
+
+Please try to watch the video via Chrome instead.
+
+https://github.com/Wesleyan-Media-Project/face_url_scraper_2022/assets/104949958/98071fdd-26e8-4d19-bf18-a8239fc8c01b
+
+
+## 2. Overview
 
 This repo contains codes that collect and organize face images of political figures for the 2022 US election cycle.
 
@@ -125,7 +135,7 @@ The face images are collected from various sources, and the copyrights of the fa
 - National Governors Association: N.A.
 - Supreme Court: N.A.
 
-## 2. Setup
+## 3. Setup
 
 First, make sure you have the [datasets](https://github.com/Wesleyan-Media-Project/datasets) repo cloned.
 
@@ -150,7 +160,7 @@ After you have installed the required libraries, you can now run the code follow
 
 Please be careful when re-runing this script as many face images are replaced with current office holder on relevant official websites.
 
-## 3. Thank You
+## 4. Thank You
 
 <p align="center"><strong>We would like to thank our financial supporters!</strong></p><br>
 
