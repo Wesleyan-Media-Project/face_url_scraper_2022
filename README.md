@@ -50,7 +50,6 @@ Here is a summary of the final face image collection dataset:
 
 - [1,650 unique wmpids](https://github.com/Wesleyan-Media-Project/face_url_scraper_2022/blob/main/result_face_url_2022.csv) (face image ids) for the 2022 face collection
 - Among them, 94 wmpids do not have face images
-- The [`face_collection_2022`]() folder thus includes 1,556 face image files
 
 The final output contains the following fields:
 
@@ -70,7 +69,10 @@ The face images are collected from various sources and are categorized into the 
 
 #### Legislative
 
-- Candidate source: wmpcand_012523_wmpid.csv
+- Candidate source: [wmpcand_012523_wmpid.csv](https://github.com/Wesleyan-Media-Project/datasets/blob/main/candidates/wmpcand_012523_wmpid.csv)
+
+  > This file contains the wmpid of the candidates in the 2022 election cycle. This is the source file that we use to collect the face images of the candidates in script `01_ballotpedia_scaper_senate_cleanup.ipynb` and `02_ballotpedia_scaper_house_cleanup.ipynb`.
+
 - Face url source: Ballotpedia / Wikipedia
 
 1. House candidate (1193)
