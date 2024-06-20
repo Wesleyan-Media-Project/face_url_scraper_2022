@@ -71,7 +71,7 @@ The face images are collected from various sources and are categorized into the 
 
 - Candidate source: [wmpcand_012523_wmpid.csv](https://github.com/Wesleyan-Media-Project/datasets/blob/main/candidates/wmpcand_012523_wmpid.csv)
 
-  > This file contains the wmpid of the candidates in the 2022 election cycle. This is the source file that we use to collect the face images of the candidates in script `01_ballotpedia_scaper_senate_cleanup.ipynb` and `02_ballotpedia_scaper_house_cleanup.ipynb`.
+  This file contains the wmpid of the candidates in the 2022 election cycle. This is the source file that we use to collect the face images of the candidates in script `01_ballotpedia_scaper_senate_cleanup.ipynb` and `02_ballotpedia_scaper_house_cleanup.ipynb`.
 
 - Face url source: Ballotpedia / Wikipedia
 
