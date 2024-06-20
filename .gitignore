@@ -60,4 +60,9 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+.env.local
+.env.*.local `
+
+#vscode 
+.vscode
 
