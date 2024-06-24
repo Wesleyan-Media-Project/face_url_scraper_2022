@@ -24,7 +24,8 @@ To analyze the different dimensions of political ad transparency we have develop
 </video>
 
 If you are unable to see the video above (e.g., you are getting the error "No video with supported format and MIME type found"), try a different browser. We tested the video to work on Google Chrome.
-In addition, you can aslo watch the tutorial through [YouTube](https://youtu.be/RhwtWDbMQdI).
+
+Or, you can also try to watch this tutorial through [YouTube](https://youtu.be/RhwtWDbMQdI).
 
 ## 2. Overview
 
