@@ -133,25 +133,60 @@ The face images are collected from various sources, and the copyrights of the fa
 
 ## 3. Setup
 
-First, make sure you have the [datasets](https://github.com/Wesleyan-Media-Project/datasets) repo cloned.
+1. To run the code that replicate the face image collection, you should first clone this repository to your local machine.
 
-Then, you need to install the following libraries in R:
+   ```bash
+   https://github.com/Wesleyan-Media-Project/face_url_scraper_2022.git
+   ```
 
-    - tidyverse
-    - rvest
-    - httr
-    - xml2
+   In addition, you need also clone the [datasets](https://github.com/Wesleyan-Media-Project/datasets) repository to your local machine since some scripts in this repo require candidates information files like [wmpcand_012523_wmpid.csv](https://github.com/Wesleyan-Media-Project/datasets/blob/main/candidates/wmpcand_012523_wmpid.csv) form the datasets repo:
 
-Next, install the following packages for Python:
+   ```bash
+   https://github.com/Wesleyan-Media-Project/datasets.git
+   ```
 
-    - pandas
-    - numpy
-    - bs4
-    - urllib
-    - re
-    - fuzzywuzzy
+2. The scripts in this repo are in [Python](https://www.python.org/) and [R](https://www.r-project.org/). Make sure you have both installed and set up before continuing. To install and set up Python you can follow the [Beginner's Guide to Python](https://wiki.python.org/moin/BeginnersGuide). To install and set up R you can follow the [CRAN website](https://cran.r-project.org/). We also recommend using R Studio as an interface of R. Here is the [R Studio website](https://posit.co/download/rstudio-desktop/). The Python Scripts in this repo uses Jupyter Notebook as an interface. It is an interactive environment for Python development. You can install Jupyter Notebook by following the [Jupyter Notebook website](https://jupyter.org/install).
 
-After you have installed the required libraries, you can now run the code follow the order of the numbers in the file names (e.g., you can start with: `01_ballotpedia_scaper_senate_cleanup.ipynb`, then `01_ballotpedia_scaper_senate.ipynb`, then `02_ballotpedia_scaper_house_cleanup.ipynb` ... `08_face_url_final_selection.ipynb`).
+3. After you have installed the above software, you need to install the required libraries for both Python and R. First, you need to install the following libraries in R for the code [votesmart_scraper_2022.R](https://github.com/Wesleyan-Media-Project/face_url_scraper_2022/tree/main/votesmart):
+
+   - tidyverse
+   - rvest
+   - httr
+   - xml2
+
+   To install them, first open your terminal and type `R` to open R console. Then, type the following commands:
+
+   ```R
+   install.packages("tidyverse")
+   install.packages("rvest")
+   install.packages("httr")
+   install.packages("xml2")
+   ```
+
+   Next, install the required dependencies for the Python scripts. You can install them by running the following command in your terminal:
+
+   ```bash
+   pip install pandas numpy beautifulsoup4 fuzzywuzzy
+   ```
+
+4. After you have installed the required libraries, you can now run the code follow the order of the numbers in the file names (e.g., you can start with: `01_ballotpedia_scaper_senate_cleanup.ipynb`, then `01_ballotpedia_scaper_senate.ipynb`, then `02_ballotpedia_scaper_house_cleanup.ipynb` ... `08_face_url_final_selection.ipynb`).
+
+   To run the above IPython Notebook code ending with `.ipynb`, you can open the Jupyter Notebook interface by type the following in your terminal:
+
+   ```bash
+   jupyter notebook
+   ```
+
+   After you open the Jupyter Notebook interface, you can navigate to the folder where you have cloned the repo and open the script you want to run.
+
+   Then, click on the first code cell to select it.
+   Run each cell sequentially by clicking the Run button or pressing Shift + Enter.
+
+5. To run the R script [votesmart_scraper_2022.R](https://github.com/Wesleyan-Media-Project/face_url_scraper_2022/tree/main/votesmart), you can type the following command in your terminal:
+
+   ```bash
+   Rscript votesmart/votesmart_scraper_2022.R
+   ```
 
 **Note**: When re-running this script, face images will be replaced with current office holders on relevant official websites.
 
